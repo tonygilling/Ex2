@@ -10,8 +10,7 @@ Ext.define('CustomApp', {
             types: ['User Story', 'Defect'],
             attribute: "ScheduleState",
             cardConfig:{
-                xtype: 'customcard',
-                cls:"Panda"
+                xtype: 'customcard'
             }
         };
         this.add(cardBoardConfig);
