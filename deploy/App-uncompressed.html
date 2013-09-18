@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Son of Exercise 2</title>
+
+    <script type="text/javascript" src="/apps/2.0rc1/sdk.js"></script>
+
+    <script type="text/javascript">
+        Rally.onReady(function () {
+                Ext.define('CustomApp', {
+    extend: 'Rally.app.App',
+    componentCls: 'app',
+  items:{
+        html:'<a href="https://help.rallydev.com/apps/2.0rc1/doc/#!/api/Rally.ui.cardboard.CardBoard">Hint!<a>'
+    },
+
+    launch: function() {
+    }
+});
+
+                
+Ext.define('App.MyCard', {
+    //This is the class we are extending. In this case we are making a custom card extending Rally's default card
+    extend: 'Rally.ui.cardboard.Card',
+    //the alias is used to create a reference for component's xtypes
+    alias: 'widget.customcard',
+
+    //This record will have the data for the Rally Artifact when the card is created.
+    record:null,
+
+    initComponent:function(){
+        this.callParent(arguments);
+    }
+});
+
+            Rally.launchApp('CustomApp', {
+                name:"Son of Exercise 2",
+	            parentRepos:"ferentchak/RallyCertifiedDeveloperExercise1,RallyCommunity/RallyCertifiedDeveloperExercise2"
+            });
+
+        });
+    </script>
+
+
+    <style type="text/css">
+        .x-panel-body-default {
+     /* Add app styles here !! */
+     border-style:none;
+}
+
+
+.rui-card .artifact-color{
+    background-color: #35b2e4 !important;
+}
+.rui-card.parented .artifact-color{
+    background-color: #D08AAF !important;
+}
+    </style>
+</head>
+<body></body>
+</html>
